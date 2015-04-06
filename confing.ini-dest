@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+
+# File Transfer configration
+
+[sender]
+basedir = "/Users/mukaishohei/Programing/dev/"
+
+[receiver]
+host = "pyohei.com"
+port = 9999
+user = "piyo"
+passwd = "piyopiyo"
+basedir = "/Users/mukaishohei/Programing/dev/README"
