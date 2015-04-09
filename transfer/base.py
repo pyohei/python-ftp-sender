@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
 
-class Transer:
+class Transfer:
 
     def __init__(self, connection_str):
         self.inst = None
-        self.connet(connection_str)
+        self.__connet(connection_str)
 
-    def connet(self, connection_str):
+    def __connet(self, connection_str):
         defs = {
             "ftp": self.__ftp
             }
@@ -18,6 +18,6 @@ class Transer:
         return FTP_()
 
 if __name__ == "__main__":
-    b = Transer("ftp")
+    b = Transfer("ftp")
     b.inst.welcome()
     b.inst.test_ftp("127.0.0.1", 40001, "user", "passwd")
