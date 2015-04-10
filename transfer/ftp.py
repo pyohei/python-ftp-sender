@@ -29,6 +29,8 @@ class FTP_:
         self.ftp = FTP()
         self.ftp.connect(host, port)
         self.ftp.login(user, passwd)
+        print self.ftp.welcome()
+        raise
 
     def send(self, file_path):
         f = open(file_path, "rb")
@@ -44,7 +46,7 @@ class FTP_:
                 print "exist"
                 continue
             print "no"
-            print search_dir
+            print self.ftp
             self.ftp.mkd(search_dir)
 
     def __has_dir(self, dirname):
