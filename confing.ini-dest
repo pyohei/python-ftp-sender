@@ -3,11 +3,14 @@
 # File Transfer configration
 
 [sender]
-basedir = "/Users/mukaishohei/Programing/dev/"
+basedir =
 
 [receiver]
-host = "pyohei.com"
-port = 9999
-user = "piyo"
-passwd = "piyopiyo"
-basedir = "/Users/mukaishohei/Programing/dev/README"
+host =
+port =
+user =
+passwd =
+basedir =
+
+[file]
+header_path =

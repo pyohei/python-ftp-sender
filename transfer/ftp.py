@@ -25,17 +25,19 @@ class FTP_:
         self.ftp.close()
 
     def connect(self, host, port, user, passwd):
+        print host, port, user, passwd
         from ftplib import FTP
         self.ftp = FTP()
         self.ftp.connect(host, port)
         self.ftp.login(user, passwd)
-        print self.ftp.welcome()
-        raise
 
-    def send(self, file_path):
+    def send(self, dirname, filename, file_path):
+        self.ftp.cwd(dirname)
         f = open(file_path, "rb")
-        command = "STOR " + file_path
+        command = "STOR " + filename
         self.ftp.storbinary(command, f)
+        print "SUCCESS!"
+        self.ftp.cwd("/")
 
     def mkdir(self, dirname):
         dirnames = dirname[1:].split("/")
