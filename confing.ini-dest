@@ -14,3 +14,7 @@ basedir =
 
 [file]
 header_path =
+
+[all_sync]
+syncdir = 
+
