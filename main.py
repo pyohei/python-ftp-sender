@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import ConfigParser as cp
 import os
+import sys
+sys.path.append(os.path.dirname(__file__))
+
+import ConfigParser as cp
 from os import path
 import argparse
 from transfer.base import Transfer
@@ -56,7 +59,5 @@ if __name__ == "__main__":
     parser.add_argument(
             "-a", "--all", dest="all_sync", default=None, help="all sync")
     args = parser.parse_args()
-    import sys
-    sys.path.append(os.path.dirname(__file__))
     main(args.file_path, args.all_sync)
 
