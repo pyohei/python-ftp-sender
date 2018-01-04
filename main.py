@@ -49,7 +49,9 @@ def main(file_path=None, all_sync=False):
         send(transfer.inst, dirname, filename, file_path)
 
 def send(transfer, dirname, filename, file_path):
-    transfer.mkdir(dirname)
+    # Need space on top of directory name.
+    # But I don't know why this is required...
+    transfer.mkdir(" "+dirname)
     transfer.send(dirname, filename, file_path)
 
 if __name__ == "__main__":
