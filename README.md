@@ -50,6 +50,13 @@ You can change the argument of `walker.py` to your target file name.
 python2.7 main.py -f walker.py
 ```
 
+## TODO
+
+- Check argument strictly
+- Simplify setting
+- Change setting into environment variable
+- Check for python3
+
 ## Licence 
 
 MIT
