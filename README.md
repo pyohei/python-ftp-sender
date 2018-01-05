@@ -50,6 +50,17 @@ You can change the argument of `walker.py` to your target file name.
 python2.7 main.py -f walker.py
 ```
 
+## Testing
+
+You can run test ftp server with next command.
+
+```sh
+cd testserver
+python ftpserver.py
+```
+
+There are connection information in `testserver/ftpserver.py`
+
 ## TODO
 
 - Check argument strictly
