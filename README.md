@@ -29,12 +29,26 @@ The writing way has in `config.ini`
 
 ### Excecute script 
 
-You can run with below command.
+You can run with two type of sync.  
 
-```
-python2.7 main.py 
+1. Sync directory
+
+If you want to sync directory, you must set variables of `syncdir` and `header_path` in `config.ini`.  
+After setting, you can run script the below command.  
+
+```sh
+python2.7 main.py -a True
 ```
 
+2. Sync specific file
+
+If you want to sync specific file, you must set `header_path` in `config.ini`.  
+After setting, you can run script the below command.  
+You can change the argument of `walker.py` to your target file name.  
+
+```sh
+python2.7 main.py -f walker.py
+```
 
 ## Licence 
 
