@@ -3,18 +3,32 @@
 # File Transfer configration
 
 [sender]
-basedir =
+basedir = ./
 
 [receiver]
-host =
-port =
-user =
-passwd =
-basedir =
+host = 127.0.0.1
+port = 40001
+user = user
+passwd = passwd
+# FTP Server base directory.
+# Set directory name of sync destination path.
+basedir = /
 
+# This setting is base directory of transfer file.
+# ex)
+#    If you want to transfer /var/log/hoge.txt, you set `header_path`
+#      header_path = /var/log
+#    And you run script with 
+#      $ python2 main.py -f hoge.txt 
+#    If you want to sync directory, check next comment!
 [file]
-header_path =
+header_path = /var/log
 
+# You set the below value if you want to sync directory.
+# ex)
+#    If you want to sync `/var/log/foo` directory, you set `syncdir` as
+#      syncdir = /var/log/foo
+#    of course, you must set variable of `header_path`!
 [all_sync]
-syncdir = 
+syncdir = /var/log/foo
 
