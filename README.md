@@ -1,4 +1,4 @@
-# File transfer(FTP)
+# File synchronize　with Python(Only FTP)
 
 Transfer file into FTP server.  
 This script is created for myself, so I can't guarantee that this script accurately.  
