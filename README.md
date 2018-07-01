@@ -1,33 +1,40 @@
 # File synchronize　with Python(Only FTP)
 
-Transfer file into FTP server.  
-This script is created for myself, so I can't guarantee that this script accurately.  
-Only python 2.7 work collectly.
+Transfer files into FTP server with Python.  
+This script for myself, and there are some bugs in this code.  
+
+
+## Eevironment
+
+Python2.7
 
 
 ## Usage
 
-### Set up library
+### Install
 
-You set up library like below.
+`git clone https://github.com/pyohei/fsync-py.git`
+
+### Set up
+
+Install dependent libraries(recommend virtualenv).  
 
 ```sh
+cd fsync-py
 pip install -r requirements.txt
 ```
 
-I recommend you to use virtualenv.
+### Create configuration
 
-### Create config file
+You need to prepare configure file.  
 
-First, create config file.
 ```sh
 cp config.ini-dest config.ini
 ```
 
 After this, set variables in `config.ini`.  
-The writing way has in `config.ini`
 
-### Excecute script 
+### Excecute
 
 You can run with two type of sync.  
 
@@ -47,7 +54,7 @@ After setting, you can run script the below command.
 You can change the argument of `walker.py` to your target file name.  
 
 ```sh
-python2.7 main.py -f walker.py
+python main.py -f walker.py
 ```
 
 ## Testing
@@ -60,13 +67,6 @@ python ftpserver.py
 ```
 
 There are connection information in `testserver/ftpserver.py`
-
-## TODO
-
-- Check argument strictly
-- Simplify setting
-- Change setting into environment variable
-- Check for python3
 
 ## Licence 
 
