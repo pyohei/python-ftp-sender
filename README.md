@@ -1,6 +1,6 @@
-# File synchronize　with Python(Only FTP)
+# Send files to FTP server
 
-Transfer files into FTP server with Python.  
+Send files into FTP server with Python.  
 This script for myself, and there are some bugs in this code.  
 
 
@@ -13,26 +13,20 @@ Python2.7
 
 ### Install
 
-`git clone https://github.com/pyohei/fsync-py.git`
+`git clone https://github.com/pyohei/python-ftp-sender.git`
 
 ### Set up
 
 Install dependent libraries(recommend virtualenv).  
 
 ```sh
-cd fsync-py
+cd python-ftp-sender
 pip install -r requirements.txt
 ```
 
 ### Create configuration
 
-You need to prepare configure file.  
-
-```sh
-cp config.ini-dest config.ini
-```
-
-After this, set variables in `config.ini`.  
+You need to edit `config.ini`.  
 
 ### Excecute
 
@@ -44,7 +38,7 @@ If you want to sync directory, you must set variables of `syncdir` and `header_p
 After setting, you can run script the below command.  
 
 ```sh
-python2.7 main.py -a True
+python main.py -a True
 ```
 
 2. Sync specific file
